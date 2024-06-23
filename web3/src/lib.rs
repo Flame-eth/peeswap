@@ -4,7 +4,7 @@
 //! This example demonstrates how multi-party authorization can be implemented.
 #![no_std]
 
-use soroban_sdk::{contract, contractimpl, token, Address, Env, IntoVal};
+use soroban_sdk::{contract, contractimpl, log, token, Address, Env, IntoVal};
 
 #[contract]
 pub struct AtomicSwapContract;
@@ -24,6 +24,7 @@ impl AtomicSwapContract {
         min_b_for_a: i128,
         amount_b: i128,
         min_a_for_b: i128,
+        
     ) {
         // Verify preconditions on the minimum price for both parties.
         if amount_b < min_b_for_a {
@@ -32,6 +33,9 @@ impl AtomicSwapContract {
         if amount_a < min_a_for_b {
             panic!("not enough token A for token B");
         }
+
+         
+
         // Require authorization for a subset of arguments specific to a party.
         // Notice, that arguments are symmetric - there is no difference between
         // `a` and `b` in the call and hence their signatures can be used
@@ -43,9 +47,15 @@ impl AtomicSwapContract {
             (token_b.clone(), token_a.clone(), amount_b, min_a_for_b).into_val(&env),
         );
 
+
         // Perform the swap by moving tokens from a to b and from b to a.
         move_token(&env, &token_a, &a, &b, amount_a, min_a_for_b);
         move_token(&env, &token_b, &b, &a, amount_b, min_b_for_a);
+
+        /* adding another functionality to log the swap details */
+        log!(&env, "swap", (a, b, token_a, token_b, amount_a, min_b_for_a, amount_b, min_a_for_b));    
+
+     
     }
 }
 
@@ -72,6 +82,13 @@ fn move_token(
         from,
         &(max_spend_amount - transfer_amount),
     );
+
+    log!(&env, "transfer", (from, to, max_spend_amount, transfer_amount));
 }
 
+
+
+
+
 mod test;
+
