@@ -7,10 +7,10 @@
 use soroban_sdk::{contract, contractimpl, log, token, Address, Env, IntoVal};
 
 #[contract]
-pub struct AtomicSwapContract;
+pub struct peeswapContract;
 
 #[contractimpl]
-impl AtomicSwapContract {
+impl peeswapContract {
     // Swap token A for token B atomically. Settle for the minimum requested price
     // for each party (this is an arbitrary choice; both parties could have
     // received the full amount as well).
