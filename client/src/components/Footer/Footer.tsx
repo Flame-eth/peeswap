@@ -73,7 +73,7 @@ const Footer = () => {
                 &copy; 2024
               </p>
               <p className="text-white montserrat-all font-medium md:text-xl">
-                Peeswap Labs
+                Peeswap
               </p>
             </div>
             <div className="hidden md:flex flex-row gap-8 items-center">
