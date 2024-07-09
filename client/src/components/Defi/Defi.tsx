@@ -9,91 +9,92 @@ import stripeOne from "@/assets/images/stripe-1.png";
 import stripeTwo from "@/assets/images/stripe-2.png";
 import stripeThree from "@/assets/images/stripe-3.png";
 import stripeFour from "@/assets/images/stripe-7.png";
+import { IDefiData } from "@/interfaces";
 
 const exchanges = [
-  {
-    name: "Ethereum",
-    shortName: "ETH",
-    direction: "bull",
-    value: "$3,557.55",
-    percentage: "0.23",
-    iconUrl: ethIcon,
-  },
-  {
-    name: "USD Coin",
-    shortName: "USDC",
-    direction: "bear",
-    value: "$1.00",
-    percentage: "0.00",
-    iconUrl: usdIcon,
-  },
-  {
-    name: "Peeswap",
-    shortName: "PEE",
-    direction: "bull",
-    value: "$11.08",
-    percentage: "3.66",
-    iconUrl: peeIcon,
-  },
-  {
-    name: "Lido DAO",
-    shortName: "LDO",
-    direction: "bear",
-    value: "$2.12",
-    percentage: "6.59",
-    iconUrl: lidoIcon,
-  },
+	{
+		name: "Ethereum",
+		shortName: "ETH",
+		direction: "bull",
+		value: "$3,557.55",
+		percentage: "0.23",
+		iconUrl: ethIcon,
+	},
+	{
+		name: "USD Coin",
+		shortName: "USDC",
+		direction: "bear",
+		value: "$1.00",
+		percentage: "0.00",
+		iconUrl: usdIcon,
+	},
+	{
+		name: "Peeswap",
+		shortName: "PEE",
+		direction: "bull",
+		value: "$11.08",
+		percentage: "3.66",
+		iconUrl: peeIcon,
+	},
+	{
+		name: "Lido DAO",
+		shortName: "LDO",
+		direction: "bear",
+		value: "$2.12",
+		percentage: "6.59",
+		iconUrl: lidoIcon,
+	},
 ];
 
 const defiData = [
-  {
-    heading: "Web app",
-    description:
-      "Swapping made simple. Access thousands of tokens on 8+ chains",
-    color: "blue",
-    badgeIcon: "fi fi-sr-computer",
-    bgImage: stripeTwo,
-  },
-  {
-    heading: "Peeswap wallet",
-    description:
-      "The wallet built for swapping. Available for iOS and Android.",
-    color: "pink",
-    badgeIcon: "fi fi-sr-wallet",
-    bgImage: stripeOne,
-  },
-  {
-    heading: "Developer docs",
-    description: "Build the next generation of open applications and tools.",
-    color: "green",
-    badgeIcon: "fi fi-sr-api",
-    bgImage: stripeThree,
-  },
-  {
-    heading: "Liquidity",
-    description:
-      "Provide liquidity to pools on the Peeswap Protocol and earn fees on swaps.",
-    color: "purple",
-    badgeIcon: "fi fi-ss-chart-simple",
-    bgImage: stripeFour,
-    backgroundClassNames: "rotate-[-60deg]",
-  },
+	{
+		heading: "Web app",
+		description:
+			"Swapping made simple. Access thousands of tokens on 8+ chains",
+		color: "blue",
+		badgeIcon: "fi fi-sr-computer",
+		bgImage: stripeTwo,
+	},
+	{
+		heading: "Peeswap wallet",
+		description:
+			"The wallet built for swapping. Available for iOS and Android.",
+		color: "pink",
+		badgeIcon: "fi fi-sr-wallet",
+		bgImage: stripeOne,
+	},
+	{
+		heading: "Developer docs",
+		description: "Build the next generation of open applications and tools.",
+		color: "green",
+		badgeIcon: "fi fi-sr-api",
+		bgImage: stripeThree,
+	},
+	{
+		heading: "Liquidity",
+		description:
+			"Provide liquidity to pools on the Peeswap Protocol and earn fees on swaps.",
+		color: "purple",
+		badgeIcon: "fi fi-ss-chart-simple",
+		bgImage: stripeFour,
+		backgroundClassNames: "rotate-[-60deg]",
+	},
 ];
 
 type Props = {};
 
 export const Defi = ({}: Props) => {
-  return (
-    <div className="py-8 md:py-16 w-[90%] mx-auto relative z-10">
-      <div className="w-full">
-        <h1 className="text-white montserrat-all font-medium text-2xl md:text-3xl">
-          Go direct to DeFi
-        </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
-          {defiData.map((data) => (
-            <DefiCard {...data} />
-          ))}
-          {/* <DefiCard
+	return (
+		<div className="py-8 md:py-16 w-[90%] mx-auto relative z-10">
+			<div className="w-full">
+				<h1 className="text-white montserrat-all font-medium text-2xl md:text-3xl">
+					Go direct to DeFi
+				</h1>
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+					{defiData.map((data: IDefiData, id: number) => (
+						<DefiCard key={id} {...data} />
+					))}
+					{/* <DefiCard
             color={"blue"}
             badgeIcon={"fi fi-sr-computer"}
             badgeText={"Web app"}
@@ -144,8 +145,8 @@ export const Defi = ({}: Props) => {
               on swaps.
             </h2>
           </DefiCard> */}
-        </div>
-      </div>
-    </div>
-  );
+				</div>
+			</div>
+		</div>
+	);
 };
