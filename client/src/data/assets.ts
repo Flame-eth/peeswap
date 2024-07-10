@@ -11,6 +11,7 @@ import zora from "@/assets/asset-icons/zora.png";
 import zksync from "@/assets/asset-icons/zksync.png";
 import usdc from "@/assets/assest-icons/usdc.png";
 import xlm from "@/assets/assest-icons/xlm.png";
+import xlmsvg from "@/assets/asset-icons/xlm.svg";
 
 export type Asset = {
   name: string;
@@ -21,18 +22,23 @@ export type Asset = {
 export const assets: Asset[] = [
   {
     name: "Xlm",
-    imgUrl:xlm,
+    imgUrl: xlm,
     abbr: "XLM",
   },
   {
     name: "usdc coin",
-    imgUrl:usdc,
+    imgUrl: usdc,
     abbr: "USDC",
   },
   {
     name: "Ethereum",
     imgUrl: ethereum,
     abbr: "ETH",
+  },
+  {
+    name: "XLM Native",
+    imgUrl: xlmsvg,
+    abbr: "XLM",
   },
   {
     name: "Arbitrum",
