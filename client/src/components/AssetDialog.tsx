@@ -39,17 +39,17 @@ export function AssetDialog({
         <button className="rounded-md gap-1 md:gap-2 flex items-center hover:bg-[#222222] duration-300 transition-colors">
           <img
             src={currentAsset.imgUrl}
-            className="w-6 h-6 rounded-full object-contain md:w-9 md:h-9"
+            className="object-contain w-6 h-6 rounded-full md:w-9 md:h-9"
           />
           <div className="flex flex-col items-start gap-[2px]">
-            <span className="text-white font-medium text-xs md:text-sm montserrat-all">
+            <span className="text-xs font-medium text-white md:text-sm montserrat-all">
               {currentAsset.name}
             </span>
-            <span className="text-gray-500 font-semibold uppercase text-xs montserrat-all">
+            <span className="text-xs font-semibold text-gray-500 uppercase montserrat-all">
               {currentAsset.abbr}
             </span>
           </div>
-          <i className="fi fi-rr-angle-small-down text-white flex text-base md:text-xl"></i>
+          <i className="flex text-base text-white fi fi-rr-angle-small-down md:text-xl"></i>
         </button>
       </DialogTrigger>
       <DialogContent
@@ -66,12 +66,12 @@ export function AssetDialog({
             <div className="flex items-center gap-2">
               {/* Search */}
               <div className="relative flex items-center gap-2 rounded-xl card px-2 py-1 border border-[#ffffff12] overflow-hidden flex-1">
-                <div className="w-8 h-8 flex justify-center items-center">
-                  <i className="fi fi-br-search text-gray-500 text-base flex"></i>
+                <div className="flex items-center justify-center w-8 h-8">
+                  <i className="flex text-base text-gray-500 fi fi-br-search"></i>
                 </div>
                 <input
                   type="text"
-                  className="flex-1 outline-none border-none bg-transparent placeholder:text-gray-500 montserrat-all text-xs font-medium text-gray-500"
+                  className="flex-1 text-xs font-medium text-gray-500 bg-transparent border-none outline-none placeholder:text-gray-500 montserrat-all"
                   placeholder="Type asset name or home domain"
                 />
               </div>
@@ -79,16 +79,16 @@ export function AssetDialog({
               {/* Coin dropdown */}
               <DropdownMenu onOpenChange={handleDropdownState}>
                 <DropdownMenuTrigger>
-                  <button className="card flex justify-between items-center gap-1 p-2 rounded-xl">
+                  <button className="flex items-center justify-between gap-1 p-2 card rounded-xl">
                     <img
                       src={currentAsset.imgUrl}
                       alt={`${currentAsset.name} logo`}
-                      className="w-5 h-5 object-contain rounded-md"
+                      className="object-contain w-5 h-5 rounded-md"
                     />
                     {isDropdownOpen ? (
-                      <i className="fi fi-rr-angle-small-up text-gray-500 flex text-xl md:text-2xl"></i>
+                      <i className="flex text-xl text-gray-500 fi fi-rr-angle-small-up md:text-2xl"></i>
                     ) : (
-                      <i className="fi fi-rr-angle-small-down text-gray-500 flex text-xl md:text-2xl"></i>
+                      <i className="flex text-xl text-gray-500 fi fi-rr-angle-small-down md:text-2xl"></i>
                     )}
                   </button>
                 </DropdownMenuTrigger>
@@ -98,20 +98,20 @@ export function AssetDialog({
                       className="cursor-pointer text-gray-300 hover:text-[#ffffff12] rounded-xl p-3 flex items-center justify-between"
                       onClick={() => onChangeSelectedAsset(asset)}
                     >
-                      <div className="w-full flex justify-between items-center">
+                      <div className="flex items-center justify-between w-full">
                         <div className="flex items-center gap-2">
                           <img
                             src={asset.imgUrl}
                             alt={`${asset.name} logo`}
-                            className="w-5 h-5 object-contain rounded-md"
+                            className="object-contain w-5 h-5 rounded-md"
                           />
-                          <span className="montserrat-all font-medium text-sm text-gray-300">
+                          <span className="text-sm font-medium text-gray-300 montserrat-all">
                             {asset.name}
                           </span>
                         </div>
                         {currentAsset.name === asset.name && (
                           <div>
-                            <i className="fi fi-br-check flex text-yellow-500 text-base"></i>
+                            <i className="flex text-base text-yellow-500 fi fi-br-check"></i>
                           </div>
                         )}
                       </div>
