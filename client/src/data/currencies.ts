@@ -1,5 +1,6 @@
 import USD from "@/assets/currencies/USD.png";
 import EUR from "@/assets/currencies/EUR.png";
+import NGN from "@/assets/currencies/NGN.png";
 import GBP from "@/assets/currencies/GBP.png";
 import AUD from "@/assets/currencies/AUD.png";
 import BGN from "@/assets/currencies/BGN.png";
@@ -76,6 +77,11 @@ export const paymentCurrencies: Currency[] = [
     name: "US Dollar",
     imgUrl: USD,
     abbr: "USD",
+  },
+  {
+    name: "Naira",
+    imgUrl: NGN,
+    abbr: "NGN",
   },
   {
     name: "Euro",

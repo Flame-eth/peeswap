@@ -65,7 +65,6 @@ const helpLinks = [
 ];
 
 const Footer = () => {
-<<<<<<< HEAD
 	return (
 		<div className="py-8 md:py-16 w-[90%] mx-auto relative z-10">
 			<div className="w-full">
@@ -143,7 +142,7 @@ const Footer = () => {
 			</div>
 		</div>
 	);
-=======
+
   return (
     <div className="py-8 md:py-16 w-[90%] mx-auto relative z-10">
       <div className="w-full">
@@ -221,7 +220,7 @@ const Footer = () => {
       </div>
     </div>
   );
->>>>>>> befa9caf09eb0babc7d998140c200f8710e67eba
+
 };
 
 export default Footer;
