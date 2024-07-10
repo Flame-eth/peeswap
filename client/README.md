@@ -1,30 +1,60 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Peeswap
 
-Currently, two official plugins are available:
+Peeswap is a decentralized application that allows users to swap their assets. This project uses wagmi to connect with wallets and interact with smart contracts.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Ensure you have the following installed:
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js (v14 or later)
+- npm (v6 or later)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Installation
+
+1. Clone the repository:
+
+    ```sh
+    git clone https://github.com/Flame-eth/peeswap.git
+    ```
+
+2. Navigate to the client directory:
+
+    ```sh
+    cd peeswap/client
+    ```
+
+3. Install the dependencies:
+
+    ```sh
+    npm install
+    ```
+
+### Usage
+
+After installing the dependencies, you can start the development server:
+
+```sh
+npm start
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+This will start the application in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### Connecting Wallet and Interacting with Smart Contracts
+
+This project uses [wagmi](https://wagmi.sh/react/getting-started) to manage wallet connections and interactions with smart contracts. Refer to the [wagmi documentation](https://wagmi.sh/react/getting-started) for detailed instructions on how to get started with wagmi in your application.
+
+### Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or new features you would like to add.
+
+### License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Happy Coding!
+```
