@@ -2,7 +2,7 @@ import { useRef } from "react";
 import styled from "styled-components";
 import { navLinks } from "./Navbar";
 import classNames from "classnames";
-import ConnectButton from "./ConnectBtn";
+import {ConnectButton} from "./ConnectBtn";
 import { useAccount } from "wagmi";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { Account } from "./Accounts";

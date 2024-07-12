@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useAccount } from "wagmi";
 import { Account } from "./Accounts";
 import { WalletOptions } from "./WalletOptions";
-import ConnectButton from "./ConnectBtn";
+import { ConnectButton } from "./ConnectBtn";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 export const navLinks = [
   {
