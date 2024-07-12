@@ -8,6 +8,7 @@ import { Account } from "./Accounts";
 // import ConnectButton from "./ConnectBtn";
 import {setAllowed} from "@stellar/freighter-api"
 import { ConnectButton } from "./ConnectBtn";
+import { WalletData } from "./ui/wallet-data";
 // import { useWeb3Modal } from "@web3modal/wagmi/react";
 export const navLinks = [
 	{
@@ -99,7 +100,7 @@ const Navbar = () => {
 					)} */}
 					
 					<ConnectButton />
-					{/* <ConnectWallet /> */}
+					{/* <WalletData /> */}
 				</div>
 				<button
 					className="text-gray-300 p-4 cursor-pointer flex items-center justify-center md:hidden"

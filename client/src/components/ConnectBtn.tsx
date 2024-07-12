@@ -26,7 +26,7 @@ export const ConnectButton = () => {
 			setWalletAddress((await getUserInfo()).publicKey)
 		}
 	  confirmWalletConnection()
-	}, [])
+	}, [isAllowed])
 	
 	if(isAllowed){
 		return(
