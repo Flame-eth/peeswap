@@ -9,8 +9,8 @@ import celo from "@/assets/asset-icons/celo.png";
 import blast from "@/assets/asset-icons/blast.png";
 import zora from "@/assets/asset-icons/zora.png";
 import zksync from "@/assets/asset-icons/zksync.png";
-import usdc from "@/assets/assest-icons/usdc.png";
-import xlm from "@/assets/assest-icons/xlm.png";
+import usdc from "@/assets/asset-icons/usdc.png";
+import xlm from "@/assets/asset-icons/xlm.png";
 import xlmsvg from "@/assets/asset-icons/xlm.svg";
 
 export type Asset = {
