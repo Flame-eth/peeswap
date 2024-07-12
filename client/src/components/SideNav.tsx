@@ -2,7 +2,7 @@ import { useRef } from "react";
 import styled from "styled-components";
 import { navLinks } from "./Navbar";
 import classNames from "classnames";
-import ConnectButton from "./ConnectBtn";
+import {ConnectButton} from "./ConnectBtn";
 import { useAccount } from "wagmi";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { Account } from "./Accounts";
@@ -13,11 +13,11 @@ interface SideNavProps {
 }
 
 const SideNav = ({ onClose, isOpen }: SideNavProps) => {
-	const { isConnected } = useAccount();
-	const web3 = useWeb3Modal();
-	const connectWallet = () => {
-		web3.open();
-	};
+	// const { isConnected } = useAccount();
+	// const web3 = useWeb3Modal();
+	// const connectWallet = () => {
+	// 	web3.open();
+	// };
 	return (
 		<SideNavContainer
 			className={classNames(
@@ -60,7 +60,7 @@ const SideNav = ({ onClose, isOpen }: SideNavProps) => {
 				{/* <button className="uppercase border border-yellow-500 text-yellow-500 hover:text-white text-xs px-6 py-3 cursor-pointer hover:bg-yellow-500 transition-colors rounded-md w-full">
           Connect wallet
         </button> */}
-				{isConnected && (
+				{/* {isConnected && (
 					<button
 						onClick={() => web3.open()}
 						className="uppercase border border-yellow-500 text-yellow-300 hover:text-white text-xs px-6 py-2 cursor-pointer ml-6 hover:bg-yellow-500 transition-colors rounded-md">
@@ -73,7 +73,8 @@ const SideNav = ({ onClose, isOpen }: SideNavProps) => {
 						className="uppercase border border-yellow-500 text-yellow-300 hover:text-white text-xs px-6 py-2 cursor-pointer ml-6 hover:bg-yellow-500 transition-colors rounded-md">
 						Connect Wallet
 					</button>
-				)}
+				)} */}
+				<ConnectButton/>
 			</div>
 		</SideNavContainer>
 	);
