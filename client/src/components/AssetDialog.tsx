@@ -8,7 +8,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import ethLogo from "@/assets/icons/eth.png";
 import {
   DropdownMenu,
   DropdownMenuContent,

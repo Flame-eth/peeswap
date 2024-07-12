@@ -25,12 +25,12 @@
     "lucide-react": "^0.399.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.24.0",
+    "react-router-dom": "^6.24.1",
     "styled-components": "^6.1.11",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "viem": "^2.17.3",
-    "wagmi": "^2.10.9"
+    "wagmi": "^2.10.10"
   },
   "devDependencies": {
     "@types/node": "^20.14.9",
