@@ -1,7 +1,7 @@
 
-# Peepswap
+# Peeswap
 
-Peepswap is a decentralized web swapping protocol designed to facilitate easy and secure asset swapping. The project is split into two main parts:
+Peeswap is a decentralized web swapping protocol designed to facilitate easy and secure asset swapping. The project is split into two main parts:
 
 - **Client**: A front-end application built with Vite and TypeScript.
 - **Web3**: A back-end service built with Rust.
